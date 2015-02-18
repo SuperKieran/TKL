@@ -1,0 +1,12 @@
+<nav class="pagination" role="pagination">
+    <% if (page.prev) { %>
+    <a class="pull-left" href="<%- url_for(page.prev.path) %>" style="float: left;">
+        ← <%- page.prev.title %>
+    </a>
+    <% } %>
+    <% if (page.next) { %>
+    <a class="pull-right" href="<%- url_for(page.next.path) %>">
+        <%- page.next.title %> →
+    </a>
+    <% } %>
+</nav>

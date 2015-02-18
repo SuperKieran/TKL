@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+<%- partial('casper/head') %>
+<!--<% if (typeof page.title == 'undefined') { %>
+<body class="home-template">
+<% } else { %>
+<body class="post-template">
+<% } %>-->
+<body id="index" class="lightnav animsition">
+
+      <%- partial('casper/header') %>
+      <%- body %>
+      <%- partial('casper/footer') %>
+      <%- partial('casper/after_all') %>
+
+</body>
+</html>

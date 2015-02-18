@@ -1,0 +1,11 @@
+<span class="post-meta">
+      <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
+          <%= date(post.date, null) %>
+      </time>
+    <% if (post.tags && post.tags.length){ %>
+    <% count = post.tags.length %>
+    | <% post.tags.forEach(function(tag, index) { %>
+    <a href='<%= config.root + tag.path %>'><%= tag.name %></a><% if (count !== index+1) { %>,<% } %>
+    <% }); %>
+    <% } %>
+</span>

@@ -1,0 +1,46 @@
+<!-- ============================ Content =========================== -->
+
+<section id="intro">
+    <div class="container">
+        <% page.posts.each(function(post) { %>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="<%- config.root %><%- post.path %>"><%- post.title %></a></h3>
+                    <span>
+                        <%- partial('post/meta', {post: post}) %>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      <% if (post.excerpt){ %>
+                        <%- post.excerpt %>
+                      <% } else { %>
+                        <%- post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %>
+                      <% } %>
+                    </p>
+                    <% if (theme.excerpt_link) { %>
+                    <p class="pull-right readMore">
+                        <a href="<%- config.root %><%- post.path %>"><%= theme.excerpt_link %>...</a>
+                    </p>
+                    <% } %>
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        <% }); %>
+        <nav class="pagination" role="pagination">
+          <% if (page.prev) { %><a class="pull-left" href="<%- url_for(page.prev_link) %>">← Newer Posts</a><% } %>
+          <% if (page.next) { %><a class="pull-right" href="<%- url_for(page.next_link) %>">Older Posts →</a><% } %>
+        </nav>
+    </div>
+</section>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p><%- theme.bottom_saying %></p>
+        </div>
+    </div>
+</section>
+<!-- ============================ END Content =========================== -->

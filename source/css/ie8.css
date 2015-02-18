@@ -1,0 +1,54 @@
+/* IE8 Template Styles & Fixes */
+
+/* Polyfill for full-scale background images in IE */
+#hero,
+#fallback,
+.element-img,
+#featured .featured-item,
+.overview-img,
+#page-header {
+	background-size: cover;
+	-ms-behavior: url(includes/backgroundsize.min.htc);
+	behavior: url(includes/backgroundsize.min.htc);
+}
+.wow {
+	visibility: visible !important;
+}
+
+#page-header {
+	width: 100%
+}
+
+html.sb-init.sb-active.sb-active-right,
+html.sb-init.sb-active.sb-active-right #featured a,
+html.sb-init.sb-active.sb-active-right ul.filters li p,
+html.sb-init.sb-active.sb-active-right #projects .projects .label-text h3 a {
+	cursor: default;
+}
+/* For further info on how to select rgba compatible values for IE8, see > http://css-tricks.com/rgba-browser-support/ */
+.navbar-inner.lightnav-alt,
+#blog-post .navbar-inner { 
+	background:transparent;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6FFFFFF,endColorstr=#E6FFFFFF); 
+	zoom: 1;
+}
+#featured a.meta {
+	background:transparent;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000); 
+	zoom: 1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+#featured a.meta:hover {
+	background:transparent;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3000000,endColorstr=#B3000000); 
+	zoom: 1;
+}
+.map-cover {
+	background:transparent;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3131313,endColorstr=#B3131313); 
+	zoom: 1;
+}

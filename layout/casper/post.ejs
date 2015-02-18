@@ -1,0 +1,18 @@
+<% permalink = config.url + config.root + post.path %>
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<%- partial('post/meta') %>
+                <h1><%- post.title %></h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<%- post.content %>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <%- partial('post/navigation') %>
+        <div class="duoshuo"><%- partial('post/duoshuo') %></div>
+    </div>
+</section>

@@ -1,0 +1,42 @@
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+                <h1><%- post.title %></h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+            <%- post.content %>
+            <div class="clearfix"></div>
+        </div>
+        
+    </div>
+</section>
+<section id="process">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="timeline-centered">
+                    <div class="line"></div>
+                    <div class="present">Past</div>
+                    <div class="dot_tp"></div>
+                    <div class="born">Now</div>
+                    <div class="dot_bt"></div>
+                    <% theme.timeline.forEach(function(item){ %>
+                        <div class="timeline-entry">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="number"><%- item.num %></span>
+                                </div>
+                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
+                                    <p><%- item.word %></p>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+                <!-- timeline-centered -->
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,134 @@
+<!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="<%- config.root %>img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="<%- config.root %>" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="<%- config.root %><%- config.archive_dir %>" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 <% if (theme.works && theme.works.length){ %>
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <% theme.works.forEach(function(item){ %>
+                        <li><a href="<%- item.works_url %>" target="_BLANK" class="animsition-link"><%= item.works_name %></a></li>
+                    <% }); %>
+                </ul>
+            </li>
+            <% } %>
+            <% if (site.categories.length){ %>
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	<% site.categories.sort('name').each(function(item){ %>
+				    <li><a href="<%- config.root %><%- item.path %>" class="animsition-link"><%= item.name %><small>(<%= item.posts.length %>)</small></a></li>
+				    <% }); %>
+				</ul>
+        	</li>
+			<% } %>
+            <% if (theme.links && theme.links.length){ %>
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <% theme.links.forEach(function(item){ %>
+                    <li><a href="<%- item.link %>" class="animsition-link"><%= item.name %></a></li>
+                    <% }); %>
+                </ul>
+            </li>
+            <% } %>
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="<%- config.root %>about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="<%- config.root %>atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                        <% if (theme.logo) { %> <img src="<%- theme.logo %>" alt="Logo" width="35px;"/> <% } %>
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link"><%- config.title %></a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            <% if(theme.github){ %>
+                            <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            <% } %>
+                            <% if(theme.twitter){ %>
+                            <li><a href="<%- theme.twitter %>" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            <% } %>
+                            <% if(theme.facebook){ %>
+                            <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <% } %>
+                            <% if(theme.google){ %>
+                            <li><a href="<%- theme.google %>" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            <% } %>
+                            <% if(theme.weibo){ %>
+                            <li><a href="<%- theme.weibo %>" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            <% } %>
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(<%- config.root %>img/1.jpg) no-repeat center center fixed">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	<% theme.top_saying.forEach(function(item){ %>
+                                <h2><%- item.title %></h2>
+                                <p><%- item.content %></p>
+				    			<% }); %>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->

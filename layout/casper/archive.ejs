@@ -1,0 +1,55 @@
+<%
+var title = '';
+if (page.category) title = page.category;
+if (page.tag) title = page.tag;
+if (page.archive){
+  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+  else title = __('archive_a');
+}
+%>
+
+<% if (pagination == 2){ %>
+  <% page.posts.each(function(item){ %>
+    <%- partial('article', {item: item, index: true}) %>
+  <% }); %>
+
+  <%- partial('pagination') %>
+<% } else { %>
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    <% var i=0 %>
+                    <% page.posts.each(function(item){ %>
+                        <% if(i==4){ %>
+                            </div><div class="row boxes">
+                            <% i=0 %>
+                        <% } %>
+                        <% i++ %>
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            <% if (item.link){ %>
+                            <% if (item.title){ %>
+                              <h4 class="title link"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></h4>
+                            <% } else { %>
+                              <h4 class="title link"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h4>
+                            <% } %>
+                            <% } else { %>
+                              <h4 class="title"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h4>
+                            <% } %>
+                            <p><time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time></p>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>    
+        </div>
+    </div>
+</section> 
+<% } %>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p><%- theme.bottom_saying %></p>
+        </div>
+    </div>
+</section>
