@@ -14,6 +14,7 @@ cd themes/light
 git pull
 ```
 ###Config
+####Theme_config.yml
 ```
 cover: /img/bg_img.jpg
 logo: /img/logo.png
@@ -55,6 +56,17 @@ links:
   link: http://go.kieran.top/
 - name: Name
   link: http://domain.com/
+```
+####Hexo_config.yml
+change some code to enable archives page
+```
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
 ```
 ###Icon
 Seclet icon which you like in<code>\TKL\source\css\iconList.css</code>  
