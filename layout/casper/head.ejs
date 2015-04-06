@@ -31,7 +31,9 @@
 
     <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
     <link rel="stylesheet" href="<%- config.root %>css/all.css" media="screen" type="text/css">
-
+	<% if (theme.highlightjs) { %>
+    <link rel="stylesheet" href="<%- config.root %>highlightjs/<%- theme.highlightjs %>.css" type="text/css">
+    <% } %>
     
 
     <!-- Custom stylesheet, (add custom styles here, always load last) -->
@@ -53,7 +55,7 @@
     <![endif]-->
 
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="<%- config.root %>js/jquery-1.11.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
 
     <!-- Load these in the <head> for quicker IE8+ load times -->

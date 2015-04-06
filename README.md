@@ -27,6 +27,8 @@ excerpt_link: Read More
   
 rss: /atom.xml
   
+highlightjs: vs
+
 works:
 - works_name: XXX1
   works_url: /

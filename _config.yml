@@ -10,6 +10,8 @@ excerpt_link: Read More
 
 rss: /atom.xml
 
+highlightjs: vs
+
 #Works
 works:
 - works_name: AAA
