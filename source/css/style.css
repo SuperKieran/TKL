@@ -3312,6 +3312,9 @@ footer .footer_bottom {
 .ds-thread {
 	margin-bottom: 60px;
 }
+#intro .col-md-8.col-md-offset-2 img {
+	width: 100%;
+}
 /* Import the font file with the icons in it */
 @font-face { font-family: 'icons'; src:  url('../fonts/icons.woff') format('woff'); font-weight: normal; font-style: normal; }
 /* Apply these base styles to all icons */
