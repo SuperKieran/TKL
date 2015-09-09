@@ -3,7 +3,7 @@ cover: /img/bg_img.jpg
 logo: /img/logo.png
 top_saying:
 - title: YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.
-- content: 每一个不曾起舞的日子都是对生命的辜负。
+  content: 每一个不曾起舞的日子都是对生命的辜负。
 bottom_saying: 虽然还没想好写点什么，但是总觉得这里放句话比较和谐。
 # Content
 excerpt_link: Read More
@@ -26,7 +26,7 @@ duoshuo: duoshuo_name
 github: https://github.com/
 twitter: https://twitter.com/
 facebook: https://www.facebook.com/
-google: https://google.com/
+coding: https://coding.net/
 weibo: http://weibo.com/
 
 #about  timeline
@@ -44,5 +44,7 @@ timeline:
 links:
 - name: Kieran
   link: http://go.kieran.top/
+- name: Jikkai
+  link: http://blog.asaki.me/
 - name: Name
   link: http://domain.com/

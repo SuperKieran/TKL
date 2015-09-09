@@ -43,10 +43,10 @@
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
             <li><a href="<%- config.root %>about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="<%- config.root %>atom.xml" class="animsition-link" title="rss">RSS</a></li>
+            <!-- <li><a href="<%- config.root %>atom.xml" class="animsition-link" title="rss">RSS</a></li> -->
         </ul>
     </div>
-    
+
     <!-- ============================ END Off-canvas navigation =========================== -->
 
     <!-- ============================ #sb-site Main Page Wrapper =========================== -->
@@ -71,20 +71,20 @@
                         <ul class="nav">
                             <li><a href="/" class="animsition-link"><%- config.title %></a></li>
                             <li class="nolink"><span>Always </span>Creative.</li>
+                            <% if(theme.coding){ %>
+                            <li><a href="<%- theme.coding %>" title="Coding" target="_blank"><i class="icon-CN_codingnet"></i></a></li>
+                            <% } %>
                             <% if(theme.github){ %>
-                            <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="icon-Popular_GitHub"></i></a></li>
                             <% } %>
                             <% if(theme.twitter){ %>
-                            <li><a href="<%- theme.twitter %>" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            <li><a href="<%- theme.twitter %>" title="Twitter" target="_blank"><i class="icon-Popular_Twitter"></i></a></li>
                             <% } %>
                             <% if(theme.facebook){ %>
-                            <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
-                            <% } %>
-                            <% if(theme.google){ %>
-                            <li><a href="<%- theme.google %>" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="icon-Popular_Facebook"></i></a></li>
                             <% } %>
                             <% if(theme.weibo){ %>
-                            <li><a href="<%- theme.weibo %>" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            <li><a href="<%- theme.weibo %>" title="Weibo" target="_blank"><i class="icon-CN_sina_weibo"></i></a></li>
                             <% } %>
                             <li class="nolink"><span>Welcome!</span></li>
                         </ul>

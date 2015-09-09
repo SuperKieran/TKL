@@ -1,3 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-
+#hero h2 {
+    display: block;
+}
