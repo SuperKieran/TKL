@@ -20,7 +20,7 @@ cover: /img/bg_img.jpg
 logo: /img/logo.png
 top_saying:
 - title: YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.
-- content: 每一个不曾起舞的日子都是对生命的辜负。
+  content: 每一个不曾起舞的日子都是对生命的辜负。
 bottom_saying: 虽然还没想好写点什么，但是总觉得这里放句话比较和谐。
   
 excerpt_link: Read More
@@ -71,9 +71,9 @@ category: 1
 tag: 1
 ```
 ###Icon
+From [nullice| NViconsLib_Silhouette](https://github.com/nullice/NViconsLib_Silhouette)
 Seclet icon which you like in<code>\TKL\source\css\iconList.css</code>  
-![](http://kieran-hexo.qiniudn.com/hexo_14_1.png)  
-![](http://kieran-hexo.qiniudn.com/hexo_14_2.png)
+
 ###Screen
 Show
 ![](http://kieran-hexo.qiniudn.com/hexo_14_3.png)
