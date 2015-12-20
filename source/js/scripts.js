@@ -47,7 +47,7 @@ $(document).ready(function($) {
 			outClass              :   'fade-out-down-sm',
 			inDuration            :    900,
 			outDuration           :    800,
-			linkElement           :   '.animsition-link', 
+			linkElement           :   '.animsition-link',
 			//e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
 			loading               :    true,
 			loadingParentElement  :   'body', //animsition wrapper element
@@ -56,7 +56,7 @@ $(document).ready(function($) {
 			                          '-webkit-animation-duration',
 			                          '-o-animation-duration'
 			                        ],
-			//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser. 
+			//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
 			//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
 
 			overlay               :   false,
@@ -82,7 +82,8 @@ $(document).ready(function($) {
 		            var st = $(this).scrollTop();
 		            divs.css({
 		                'margin-top': -(st / 0) + "px",
-		                'opacity': 0.9 - st / 1600
+                    'opacity': 0
+		                // 'opacity': 0.9 - st / 1600
 		            });
 		        });
 		    });
@@ -124,7 +125,7 @@ $(document).ready(function($) {
 	    		top: 500
 	    	}
 		});
-		
+
 	    // Scrollspy for scrollto links in floating faq sidebar
 		var $body   = $(document.body);
 		var navHeight = $('.navbar').outerHeight(true) + 80;
