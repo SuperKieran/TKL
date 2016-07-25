@@ -3320,12 +3320,6 @@ footer .footer_bottom {
 #intro .col-md-8.col-md-offset-2 img {
 	max-width: 100%;
 }
-#intro .col-md-8.col-md-offset-2 a {
-  color: #0275d8;
-}
-#intro .col-md-8.col-md-offset-2 a:hover {
-  color: #2C4A77;
-}
 /* Import the font file with the icons in it */
 @font-face { font-family: 'icons'; src:  url('../fonts/icons.woff') format('woff'); font-weight: normal; font-style: normal; }
 /* Apply these base styles to all icons */
