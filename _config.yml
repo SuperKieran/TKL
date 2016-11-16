@@ -21,6 +21,7 @@ works:
 
 #duoshuo name
 duoshuo: duoshuo_name
+fancybox: true
 
 # Miscellaneous
 github: https://github.com/

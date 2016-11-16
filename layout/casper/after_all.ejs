@@ -1,8 +1,6 @@
 <!-- Load our scripts -->
-        
 <!-- Resizable 'on-demand' full-height hero -->
 <script type="text/javascript">
-    
     var resizeHero = function () {
         var hero = $(".cover,.heightblock"),
             window1 = $(window);
@@ -10,9 +8,9 @@
             "height": window1.height()
         });
     };
-    
+
     resizeHero();
-    
+
     $(window).resize(function () {
         resizeHero();
     });
@@ -21,6 +19,24 @@
 <script src="<%- config.root %>js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
 <script src="<%- config.root %>js/scripts.js"></script><!-- Theme scripts -->
 
+<% if (theme.fancybox){ %>
+<link rel="stylesheet" href="<%- config.root %>fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="<%- config.root %>fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+<% } %>
 <!-- Initiate flexslider plugin -->
 <script type="text/javascript">
     $(document).ready(function($) {
@@ -30,5 +46,22 @@
         nextText: "",
         directionNav: true
       });
+      <!-- Baidu统计 -->
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?c71a239d451f8149ac6ebf67a0c992fa";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      <!-- Google 统计 -->
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-63685503-1', 'auto');
+      ga('send', 'pageview');
     });
 </script>
