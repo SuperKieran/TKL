@@ -20,7 +20,12 @@ works:
   works_url: /atom.xml
 
 #duoshuo name
-duoshuo: duoshuo_name
+duoshuo:
+
+#disqus name
+disqus_shortname:
+
+#fancybox
 fancybox: true
 
 # Miscellaneous
