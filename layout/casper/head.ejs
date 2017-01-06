@@ -31,27 +31,12 @@
 
     <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
     <link rel="stylesheet" href="<%- config.root %>css/all.css" media="screen" type="text/css">
-	<% if (theme.highlightjs) { %>
+    <% if (theme.highlightjs) { %>
     <link rel="stylesheet" href="<%- config.root %>highlightjs/<%- theme.highlightjs %>.css" type="text/css">
     <% } %>
-    
 
-    <!-- Custom stylesheet, (add custom styles here, always load last) -->
-    <!-- Load our stylesheet for IE8 -->
     <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="<%- config.root %>css/ie8.css" />
-    <![endif]-->
-
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
     <![endif]-->
 
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
@@ -65,15 +50,6 @@
     <script src="<%- config.root %>js/respond.min.js"></script>
     <![endif]-->
 
-
-
-
-
-
-
-
-
-
   <% if (config.rss) { %>
   <link rel="alternate" type="application/rss+xml" title="RSS" href="<%- config.rss %>">
   <% } %>
@@ -84,11 +60,5 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="<%- config.feed.path %>">
   <% } %>
 
-  <% if (config.cloudfrontanalytics) { %>
-  <script type="text/javascript">
-    var analytics=analytics||[];(function(){var e=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group"],t=function(e){return function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var n=0;n<e.length;n++)analytics[e[n]]=t(e[n])})(),analytics.load=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+e+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)};
-    analytics.load("uj8ix0aatc");
-  </script>
-  <% } %>
   <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
