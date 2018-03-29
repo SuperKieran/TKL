@@ -83,3 +83,6 @@ Content
 ###Others
 If you like this theme, [Fork](https://github.com/SuperKieran/TKL/fork) && Star.
 Come on.
+
+###Wechat Group
+<img src="http://kieran-hexo.qiniudn.com/wechatGroup.jpg" width="300px" />
