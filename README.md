@@ -86,4 +86,4 @@ Come on.
 
 ###Wechat Group
   
-<img src="http://kieran-hexo.qiniudn.com/wechatGroup.jpg?v=2" width="300px" />
+<img src="http://kieran-hexo.qiniudn.com/wechatGroup.jpg?v=3" width="300px" />
