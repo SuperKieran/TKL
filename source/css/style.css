@@ -1,4 +1,11 @@
 @charset "utf-8";
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(../fonts/opensans.woff) format('woff');
+}
+
 *{
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
@@ -94,6 +101,9 @@ h2 {
 @media (max-width:768px) {
 	h2 {
 		font-size: 22px;
+	}
+	.changeyan {
+		width: 100%;
 	}
 }
 h3 {
@@ -208,32 +218,7 @@ hr {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-/* Placeholder text color */
-input[placeholder],
-[placeholder],
-*[placeholder] {
-	color: #999;
-	font-family: 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
-}
-input#delivery {
-	color: #999 !important;
-}
-::-webkit-input-placeholder { /* WebKit browsers */
-	color: #999;
-	opacity: 1;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	color: #999;
-	-moz-opacity: 1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-	color: #999;
-	-moz-opacity: 1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-	color: #999;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-}
+
 /* Vertical aligning */
 .vertical-align {
 	display: table;
@@ -3289,12 +3274,7 @@ footer .footer_bottom {
 	background-color: gray;
 	color: #fff!important;
 }
-.pagination {
-	width: 66%;
-	display: block;
-	margin: auto;
-}
-.pagination a{
+.m-pagination a{
 	color: gray;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -3305,24 +3285,31 @@ footer .footer_bottom {
 	overflow: hidden;
   	white-space: nowrap;
   	margin-bottom: 10px;
+
 }
-.pagination a:hover{
+.m-pagination a:hover{
 	background-color: gray;
 	color: #fff;
 }
-.duoshuo {
+
+.changeyan {
 	width: 66%;
-	margin: auto;
+	margin: 0 auto 50px;
 }
-.ds-thread {
-	margin-bottom: 60px;
+
+#intro .col-md-8.col-md-offset-2 {
+	padding-left: 0;
+	padding-right: 0;
 }
 #intro .col-md-8.col-md-offset-2 img {
 	max-width: 100%;
+	vertical-align: baseline;
 }
-#intro .index-excerpt {
-	overflow: hidden;
-	text-overflow: ellipsis;
+#intro .col-md-8.col-md-offset-2 p a {
+  color: #0275d8;
+}
+#intro .col-md-8.col-md-offset-2 p a:hover {
+  color: #2C4A77;
 }
 /* Import the font file with the icons in it */
 @font-face { font-family: 'icons'; src:  url('../fonts/icons.woff') format('woff'); font-weight: normal; font-style: normal; }
@@ -3337,3 +3324,7 @@ footer .footer_bottom {
 .icon-sina-weibo:before { content: "\e666"; }
 .icon-github:before { content: "\e636"; }
 /*---------------- END ------------------------*/
+
+nav.pagination {
+	display: block;
+}

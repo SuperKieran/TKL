@@ -17,28 +17,11 @@ $(document).ready(function($) {
 		$.slidebars();
 
 		// Popovers [Hover]
-		$("[data-toggle=popover]")
-			.popover({
-				html:true
-			}
-		);
-
-		$("html").niceScroll({
-			smoothscroll: true, // scroll with ease movement
-			autohidemode: false,
-			zindex: "100", // change z-index for scrollbar div
-        	scrollspeed: 60, // scrolling speed
-        	mousescrollstep: 40,
-        	gesturezoom: false,
-        	horizrailenabled: false,
-        	cursorcolor: "#151515",
-	        boxzoom: false,
-	        cursorborder: "0 solid #202020",
-	        cursorborderradius: "5px",
-	        cursorwidth: 9,
-	        enablemousewheel: true,
-	        background: "rgba(255,255,255,0.7)",
-		});
+		// $("[data-toggle=popover]")
+		// 	.popover({
+		// 		html:true
+		// 	}
+		// );
 
 		// Page transitions
 		$(".animsition").animsition({
@@ -47,7 +30,7 @@ $(document).ready(function($) {
 			outClass              :   'fade-out-down-sm',
 			inDuration            :    900,
 			outDuration           :    800,
-			linkElement           :   '.animsition-link',
+			linkElement           :   '.animsition-link', 
 			//e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
 			loading               :    true,
 			loadingParentElement  :   'body', //animsition wrapper element
@@ -56,7 +39,7 @@ $(document).ready(function($) {
 			                          '-webkit-animation-duration',
 			                          '-o-animation-duration'
 			                        ],
-			//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+			//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser. 
 			//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
 
 			overlay               :   false,
@@ -125,7 +108,7 @@ $(document).ready(function($) {
 	    		top: 500
 	    	}
 		});
-
+		
 	    // Scrollspy for scrollto links in floating faq sidebar
 		var $body   = $(document.body);
 		var navHeight = $('.navbar').outerHeight(true) + 80;
