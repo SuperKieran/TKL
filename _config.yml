@@ -52,3 +52,13 @@ links:
   link: http://go.kieran.top/
 - name: Name
   link: http://domain.com/
+
+# Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
+local_search:
+  enable: true
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
+  trigger: auto
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 2

@@ -27,6 +27,8 @@
       <%- body %>
       <%- partial('_partial/footer') %>
       <%- partial('_partial/after_all') %>
-
+      <% if (theme.local_search.enable) { %>
+            <%- partial('_partial/search') %>
+      <% } %>
 </body>
 </html>
