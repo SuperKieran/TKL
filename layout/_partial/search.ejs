@@ -189,40 +189,38 @@
             var isMatch = false;
             var hitCount = 0;
             var searchTextCount = 0;
-            var title = data.title.trim();
+            var title = data.title ? data.title.trim() : '';
             var titleInLowerCase = title.toLowerCase();
-            var content = data.content.trim().replace(/<[^>]+>/g,"");
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
             var contentInLowerCase = content.toLowerCase();
             var articleUrl = decodeURIComponent(data.url);
             var indexOfTitle = [];
             var indexOfContent = [];
             // only match articles with not empty titles
-            if(title != '') {
-              keywords.forEach(function(keyword) {
-                function getIndexByWord(word, text, caseSensitive) {
-                  var wordLen = word.length;
-                  if (wordLen === 0) {
-                    return [];
-                  }
-                  var startPosition = 0, position = [], index = [];
-                  if (!caseSensitive) {
-                    text = text.toLowerCase();
-                    word = word.toLowerCase();
-                  }
-                  while ((position = text.indexOf(word, startPosition)) > -1) {
-                    index.push({position: position, word: word});
-                    startPosition = position + wordLen;
-                  }
-                  return index;
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
                 }
-
-                indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-              });
-              if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                isMatch = true;
-                hitCount = indexOfTitle.length + indexOfContent.length;
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
               }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
             }
 
             // show search results
