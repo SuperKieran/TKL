@@ -103,6 +103,9 @@ Content
 If you like this theme, [Fork](https://github.com/SuperKieran/TKL/fork) && Star.
 Come on.
 
+### Share Your Blog
+Write your blog here -> https://github.com/SuperKieran/TKL/issues/54
+
 ### Wechat Group
 <img src="http://kieran-hexo.qiniudn.com/wechat.jpeg" width="300px" />
 如何加入 TKL 微信交流群？ 先加上面机器人为好友，然后发送 “TKL” 关键字，自动邀请进群
