@@ -109,3 +109,6 @@ Write your blog here -> https://github.com/SuperKieran/TKL/issues/54
 ### Wechat Group
 <img src="http://kieran-hexo.qiniudn.com/wechat.jpeg" width="300px" />
 如何加入 TKL 微信交流群？ 先加上面机器人为好友，然后发送 “TKL” 关键字，自动邀请进群
+
+### Bug
+2018年12月13日： 最新版 hexo 会自动补上闭合标签，如果出现顶部导航栏没有显示的情况，可以安装旧版本解决，安装命令 `npm i hexo@3.7.1 --save`
