@@ -91,14 +91,14 @@ search:
 ```
 ### Icon
 Seclet icon which you like in<code>\TKL\source\css\iconList.css</code>  
-![](http://kieran-hexo.qiniudn.com/hexo_14_1.png)  
-![](http://kieran-hexo.qiniudn.com/hexo_14_2.png)
+![](http://cdn.kieran.top/hexo_14_1.png)  
+![](http://cdn.kieran.top/hexo_14_2.png)
 ### Screen
 Show
-![](http://kieran-hexo.qiniudn.com/hexo_14_3.png)
+![](http://cdn.kieran.top/hexo_14_3.png)
   
 Content
-![](http://kieran-hexo.qiniudn.com/hexo_14_4.png)
+![](http://cdn.kieran.top/hexo_14_4.png)
 ### Others
 If you like this theme, [Fork](https://github.com/SuperKieran/TKL/fork) && Star.
 Come on.
@@ -107,7 +107,7 @@ Come on.
 Write your blog here -> https://github.com/SuperKieran/TKL/issues/54
 
 ### Wechat Group
-<img src="http://kieran-hexo.qiniudn.com/wechat.jpeg" width="300px" />
+<img src="http://cdn.kieran.top/wechat.jpeg" width="300px" />
 如何加入 TKL 微信交流群？ 先加上面机器人为好友，然后发送 “TKL” 关键字，自动邀请进群
 
 ### Bug
